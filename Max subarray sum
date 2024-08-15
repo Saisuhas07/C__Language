@@ -1,0 +1,27 @@
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+    }
+    int subarray=1;
+    int max;
+    int sum=0;
+    for(int i=0;i<n;i++){
+        sum=0;
+        for(int j=0;j<=subarray;j++){
+            sum+=arr[j];
+        }
+        if(sum>max){
+            max=sum;
+        }
+            subarray++;
+    }
+   printf("%d",max);
+
+    return 0;
+}
